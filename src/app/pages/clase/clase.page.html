@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar class="tod">
+    <ion-button id="backButton" slot="end" fill="clear" (click)="cerrarSesion()" class="you">
+      <ion-icon name="exit-outline"></ion-icon>
+    </ion-button>
+    <ion-button id="backButton" slot="start" fill="clear" [routerLink]="['/inicio']" class="you">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    <ion-title>Clase</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-card-header>
+        <ion-card-title>Clase</ion-card-title>
+      </ion-card-header>
+      <h5>{{infoClase}}</h5>
+      
+
+    </ion-card-content>
+
+  </ion-card>
+
+
+  <ion-card>
+    <ion-card-content>
+      <ion-card-header>
+        <ion-card-title>Alumno</ion-card-title>
+      </ion-card-header>
+      
+      <h5>Nombre: {{nombreAlumno}}</h5>
+      <h5>Rut: {{rutAlumno}}</h5>
+      <h5>Comuna: {{comunaAlumno}}</h5>
+      <h5>Latitud: {{latitude}}</h5>
+      <h5>Longitud: {{longitude}}</h5>
+      <ion-button (click)="tomarFoto()" class="tod" expand="block">
+        Tomar foto
+      </ion-button>
+      <img src="{{imageUrl}}">
+      
+
+    </ion-card-content>
+  </ion-card> 
+  <ion-button (click)="guardarAsistencia()" class="ion-margin tod" expand="block">
+    Guardar Asistencia
+  </ion-button>
+  
+  
+</ion-content>
